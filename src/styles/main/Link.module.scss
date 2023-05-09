@@ -1,0 +1,18 @@
+.link {
+     margin-top: 20px !important;
+     font-weight: 600;
+     color: #fff;
+
+     &:hover {
+          text-decoration: none;
+          color: #fff;
+
+          @media all and (max-width: 768px) {
+               color: #a3998d;
+          }
+     }
+
+     @media all and (max-width: 768px) {
+          color: #a3998d;
+     }
+}

@@ -1,0 +1,125 @@
+$spacing-letter-spacing: 1.5px;
+
+.bg-modal {
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     background-color: rgba(0, 0, 0, .3);
+     z-index: 1;
+     opacity: 0;
+     transition: all .2s;
+
+     &.active {
+          opacity: 1;
+     }
+
+     @media all and (max-width: 767px) {
+          padding-right: calc(var(--bs-gutter-x) * 1.1) !important;
+          padding-left: calc(var(--bs-gutter-x) * 1.1) !important;
+
+     }
+
+     .modal {
+          position: relative;
+          margin: auto;
+          top: -9999px;
+          max-width: 400px;
+          width: 100%;
+          background-color: #fff;
+          border-radius: 25px;
+          text-align: center;
+          transition: all .2s ease;
+          padding: 30px 20px;
+
+          &.active {
+               top: 60px;
+          }
+
+          .bg-circle {
+               width: 230px;
+               height: 230px;
+               margin: auto;
+               border-radius: 50%;
+               background-color: rgba(212, 233, 226, .5);
+               display: flex;
+               align-items: center;
+
+               @media all and (max-width: 400px) {
+                    width: 200px;
+                    height: 200px;
+               }
+
+               .circle {
+                    margin: auto;
+                    width: 170px;
+                    height: 170px;
+                    border-radius: 50%;
+                    background-color: rgb(212, 233, 226);
+                    display: flex;
+                    align-items: center;
+
+                    @media all and (max-width: 400px) {
+                         width: 140px;
+                         height: 140px;
+                    }
+
+                    &.active {
+                         animation: identifier .7s;
+
+                         @keyframes identifier {
+                              0% {
+                                   transform: scale(0);
+                              }
+
+                              25% {
+                                   transform: scale(1.2);
+                              }
+
+                              50% {
+                                   transform: scale(.8);
+                              }
+
+                              75% {
+                                   transform: scale(1.2);
+                              }
+
+                              100% {
+                                   transform: scale(1);
+                              }
+                         }
+                    }
+
+                    >svg {
+                         margin: auto;
+                         width: 100px;
+                         height: 100px;
+                         fill: #fff;
+                    }
+               }
+          }
+
+          >h3 {
+               margin-top: 30px;
+               letter-spacing: $spacing-letter-spacing;
+          }
+
+          >p {
+               margin-bottom: 0 !important;
+               font-size: 14px;
+               letter-spacing: $spacing-letter-spacing;
+          }
+
+          >a {
+               letter-spacing: $spacing-letter-spacing;
+               color: #00754a;
+               font-weight: 600;
+               font-size: 14px;
+
+               &:hover {
+                    text-decoration: none;
+               }
+          }
+     }
+}

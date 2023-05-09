@@ -1,0 +1,29 @@
+.loader {
+     position: absolute;
+     height: 4px;
+     width: 300px;
+     top: 0;
+     background-color: #007c4e;
+     animation-duration: 1.5s;
+     animation-name: identifier;
+     animation-timing-function: ease-in-out;
+     animation-iteration-count: infinite;
+
+     @keyframes identifier {
+
+          0%,
+          100% {
+               left: -200px;
+               width: 200px;
+          }
+
+          50% {
+               width: 600px;
+          }
+
+          100% {
+               left: 100%;
+               width: 300px;
+          }
+     }
+}

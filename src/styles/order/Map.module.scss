@@ -1,0 +1,62 @@
+@import '../../styles/order/Contact.module.scss';
+
+.input-box {
+     @include label;
+
+     @media all and (max-width: 767px) {
+          margin: auto;
+     }
+
+     >input {
+          @include input;
+     }
+
+     >span {
+          @include span;
+     }
+
+     >svg {
+          width: 20px;
+          height: 20px;
+          fill: #ff0000;
+     }
+
+     &:focus-within>span {
+          font-size: 13px;
+          top: -10px;
+     }
+
+     &.error {
+          box-shadow: 0 0 0 1px rgba($color: #ff0000, $alpha: .4);
+     }
+
+     >ul {
+          padding: 0;
+          position: absolute;
+          top: 36px;
+          left: 0;
+          z-index: 1;
+          width: 100%;
+
+          >li {
+               list-style: none;
+               cursor: pointer;
+               background-color: #fff;
+               width: 100%;
+
+               &:hover {
+                    background-color: #b5b5b5;
+               }
+          }
+     }
+}
+
+.wrapper {
+     clear: both;
+     max-width: 100%;
+     margin-bottom: 50px;
+
+     @media all and (max-width: 767px) {
+          margin-top: 15px;
+     }
+}

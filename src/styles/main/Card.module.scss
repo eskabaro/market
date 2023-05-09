@@ -1,0 +1,79 @@
+.card {
+     margin-bottom: 10px;
+     background-color: #eae9e5;
+     padding: 20px 20px 30px 20px;
+     border-radius: 30px;
+     text-align: center;
+     margin-bottom: 100px;
+     transition: all .2s ease;
+
+     &.active {
+          background-color: #00754a;
+          transform: scale(1.04);
+          -webkit-box-shadow: 0px 10px 53px -22px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 10px 53px -22px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 10px 53px -22px rgba(0, 0, 0, 0.75);
+          background-image: url('../../../public/images/pattern/pattern-item.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top left;
+     }
+
+     .img {
+          max-width: 250px;
+          width: 100%;
+          margin-top: -120px;
+          cursor: pointer;
+     }
+
+     .h3 {
+          color: #a3998d;
+          font-weight: 600;
+          font-size: 27px;
+          letter-spacing: -1px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          &.active {
+               color: #fff;
+               font-size: 29px;
+          }
+     }
+
+     .section {
+          margin-top: 40px;
+
+          &.active {
+               margin-top: 0;
+          }
+
+          .info-block {
+               display: none;
+
+               &.active {
+                    display: block;
+               }
+          }
+
+          .info {
+               display: flex;
+               justify-content: space-between;
+               color: #beb4a8;
+               font-weight: 600;
+
+               &.active {
+                    display: none;
+               }
+          }
+     }
+
+     .btn {
+          display: none;
+
+          &.active {
+               display: inline-grid;
+               align-items: end;
+          }
+     }
+}

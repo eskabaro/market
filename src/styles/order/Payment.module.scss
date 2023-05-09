@@ -1,0 +1,77 @@
+@mixin input {
+     background: none;
+     width: 40px;
+     height: 22px;
+     border: none;
+     outline: none;
+     position: relative;
+     -webkit-box-shadow: inset 0px -3px 0px -1px rgba(0, 0, 0, 0.7);
+     -moz-box-shadow: inset 0px -3px 0px -1px rgba(0, 0, 0, 0.7);
+     box-shadow: inset 0px -3px 0px -1px rgba(0, 0, 0, 0.7);
+
+     &::-webkit-outer-spin-button,
+     &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+     }
+}
+
+.wrapper {
+     clear: both;
+     display: grid;
+
+     >label {
+          display: flex;
+          align-items: center;
+
+          >p {
+               margin: 0 !important;
+               padding-left: 10px;
+          }
+     }
+
+     .card-wrapper {
+          margin-top: 30px;
+
+          @media all and (max-width: 767px) {
+               display: flex;
+               justify-content: center;
+          }
+
+          .card {
+               max-width: 340px;
+               width: 100%;
+               padding: 40px 50px;
+               border-radius: 25px;
+               background: linear-gradient(142deg, rgb(212, 233, 226) 30%, rgba(0, 117, 74, 1) 165%);
+               -webkit-box-shadow: 10px 10px 23px -8px rgba(212, 233, 226, 0.8);
+               -moz-box-shadow: 10px 10px 23px -8px rgba(212, 233, 226, 0.8);
+               box-shadow: 10px 10px 23px -8px rgba(212, 233, 226, 0.8);
+
+               .number-card {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 80px;
+
+                    >input {
+                         @include input;
+                    }
+               }
+
+               .number-validity {
+                    >input {
+                         width: 22px !important;
+                         @include input;
+                    }
+               }
+
+               .number-cvv {
+                    >input {
+                         @include input;
+                         width: 25px !important;
+                         text-align: center;
+                    }
+               }
+          }
+     }
+}

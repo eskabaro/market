@@ -1,0 +1,116 @@
+@mixin label {
+     display: flex;
+     max-width: 350px;
+     width: 100%;
+     height: 35px;
+     margin-top: 5px;
+     position: relative;
+     align-items: center;
+     padding-right: 10px;
+     background-color: #fff;
+     margin-bottom: 12px;
+     border-radius: 10px;
+     box-shadow: 0 0 0 1px rgba($color: #000000, $alpha: .4);
+
+     &:focus-within>span {
+          font-size: 13px;
+          height: 10px;
+          top: -10px;
+     }
+
+     &.error {
+          box-shadow: 0 0 0 1px rgba($color: #ff0000, $alpha: .4);
+     }
+
+     @media all and (max-width: 767px) {
+          justify-content: center;
+     }
+}
+
+@mixin span {
+     position: absolute;
+     left: 10px;
+     top: 7px;
+     font-size: 15px;
+     background-color: #fff;
+     color: rgba($color: #000000, $alpha: .7);
+     transition: all .4s ease;
+     padding: 0 3px 0 3px;
+
+     &.active {
+          font-size: 13px;
+          height: 10px;
+          top: -10px;
+     }
+}
+
+@mixin input {
+     width: 100%;
+     height: 20px;
+     outline: none;
+     border: none;
+}
+
+@mixin svg {
+     width: 20px;
+     height: 20px;
+     fill: #ff0000;
+}
+
+.contact {
+     margin-bottom: 50px;
+
+     @media all and (max-width: 767px) {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+     }
+
+     .first-name {
+          @include label;
+
+          >span {
+               @include span;
+          }
+
+          >input {
+               @include input;
+          }
+
+          >svg {
+               @include svg;
+          }
+     }
+
+     .last-name {
+          @include label;
+
+          >span {
+               @include span;
+          }
+
+          >input {
+               @include input;
+          }
+
+          >svg {
+               @include svg;
+          }
+     }
+
+     .number {
+          @include label;
+
+          >span {
+               @include span;
+          }
+
+          >input {
+               @include input;
+          }
+
+          >svg {
+               @include svg;
+          }
+     }
+}

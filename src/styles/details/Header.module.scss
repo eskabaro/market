@@ -1,0 +1,13 @@
+.header {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 90px;
+     margin-top: -90px;
+
+     >h1 {
+          font-weight: 600;
+          margin: 0;
+          letter-spacing: 1.5px;
+     }
+}

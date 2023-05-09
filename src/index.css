@@ -1,0 +1,10 @@
+body{
+  margin: 0;
+  font-family: SoDoSans,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}

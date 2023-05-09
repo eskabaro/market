@@ -1,0 +1,29 @@
+.Logo {
+     width: 70px;
+
+     @media all and (max-width: 767px) {
+          width: 50px;
+     }
+}
+
+.li {
+     padding: 10px;
+     list-style: none;
+     color: rgba($color: #000000, $alpha: .5);
+     font-weight: 500;
+     font-size: 17px;
+     letter-spacing: 1px;
+     cursor: pointer;
+
+     &:hover {
+          color: #00754a;
+     }
+
+     &.actv {
+          color: #00754a;
+     }
+
+     @media all and (max-width: 767px) {
+          display: none;
+     }
+}

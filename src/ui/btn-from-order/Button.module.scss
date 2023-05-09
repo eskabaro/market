@@ -1,0 +1,60 @@
+.wrapper {
+     margin-top: 50px;
+     margin-bottom: 50px;
+     text-align: end;
+
+     @media all and (max-width: 767px) {
+          text-align: center;
+     }
+
+     >button {
+          background-color: #00754a;
+          color: white;
+          border: none;
+          cursor: pointer;
+          padding: 10px 20px;
+          border-radius: 500px;
+          letter-spacing: 1.5px;
+          font-weight: 600;
+          transition: all .2s ease;
+          -webkit-box-shadow: 0px 5px 47px -7px rgba(0, 0, 0, 0.33);
+          -moz-box-shadow: 0px 5px 47px -7px rgba(0, 0, 0, 0.33);
+          box-shadow: 0px 5px 47px -7px rgba(0, 0, 0, 0.33);
+
+          &:hover {
+               background-color: #008d59;
+          }
+
+          &:active {
+               transform: scale(.96);
+          }
+
+          &:disabled {
+               cursor: auto;
+               animation: disabled .25s ease;
+               background-color: #008d59;
+          }
+     }
+}
+
+@keyframes disabled {
+     0% {
+          transform: translateX(-10px);
+     }
+
+     25% {
+          transform: translateX(10px);
+     }
+
+     50% {
+          transform: translateX(-10px);
+     }
+
+     75% {
+          transform: translateX(10px);
+     }
+
+     100% {
+          transform: translateX(0px);
+     }
+}

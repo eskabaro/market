@@ -1,0 +1,12 @@
+.wrapper {
+     padding: 0 !important;
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+     grid-template-rows: repeat(auto-fill, 470px);
+     gap: 1em;
+     margin-top: 100px !important;
+
+     @media all and (max-width: 767px) {
+          display: none;
+     }
+}
