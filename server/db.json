@@ -161,5 +161,22 @@
       "description": "A blend of hibiscus, lemongrass and apple hand-shaken with ice: a refreshingly vibrant tea infused with the color of passion"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": 3,
+      "name": "Iced Royal English Breakfast Tea Latte",
+      "searchName": "Iced-Royal-English-Breakfast-Tea-Latte",
+      "price": 6.5,
+      "size": "Tall",
+      "star": 200,
+      "img": "images/products/none-bg/Iced Royal English Breakfast Tea Latte.png",
+      "imgDetails": "images/products/default/Iced Royal English Breakfast Tea Latte.webp",
+      "calories": "140",
+      "sugar": "25g",
+      "fat": "2.5g",
+      "category": "Tea",
+      "quantity": 3,
+      "description": "A select blend of rich, full-leaf black teas from India and Sri Lanka sweetened with liquid cane sugar and combined with milk and ice."
+    }
+  ]
 }
