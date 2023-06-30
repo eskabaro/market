@@ -21,7 +21,7 @@ if (mediaQuery.matches) limitPage = 0
 export const GoodsApi = createApi({
      reducerPath: 'GoodsApi',
      tagTypes: ['GoodsCart', 'CurrentGood'],
-     baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
+     baseQuery: fetchBaseQuery({ baseUrl: 'https://backend-market.onrender.com' }),
      endpoints: (builder) => ({
           getGoods: builder.query({
                query: (body = params) => ({
